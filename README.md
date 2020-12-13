@@ -4,7 +4,7 @@
 
 ## Why
 
-It's easy to call [ShellExecuteEx](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecuteexa) with the "properties" verb to show the properties dialog. [What's hard](https://devblogs.microsoft.com/oldnewthing/?p=22163) is keeping the dialog open without blocking or using hacks like `Sleep()`. This module solves that problem using a custom executable and a wrapping Node module.
+It's easy to call [ShellExecuteEx](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecuteexa) with the `properties` verb to show the properties dialog. [What's hard](https://devblogs.microsoft.com/oldnewthing/?p=22163) is keeping the dialog open without blocking or using hacks like `Sleep()`. This module solves that problem using a custom executable and a wrapping Node module.
 
 ## Installation
 
@@ -39,7 +39,7 @@ function showProperties(targetPath: string): Promise<number | null>;
 
 ## Building the executable
 
-The module uses an executable to launch the properties dialog for the given path. The source of this executable is at [bin/show-properties.cpp](bin/show-properties.cpp) and you can build it as follows:
+The module uses an executable to launch the properties dialog for the given path. The source of this executable is at [src/show-properties.cpp](src/show-properties.cpp) and you can build it as follows:
 
 - Install an MSVC Compiler. You can get this with [windows-build-tools](https://www.npmjs.com/package/windows-build-tools) or Visual Studio.
 - Copy the `.env.bat.example` file to `.env.bat` and update the variables to match your system
