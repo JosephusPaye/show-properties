@@ -1,7 +1,7 @@
 {
   "name": "@josephuspaye/show-properties",
   "description": "Show the File Explorer properties dialog for a file or folder from Node.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "repository": {
