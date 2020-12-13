@@ -2,6 +2,8 @@
 
 > A Node.js module for showing the File Explorer properties dialog for a file or folder on Windows.
 
+This project is part of [#CreateWeekly](https://twitter.com/JosephusPaye/status/1214853295023411200), my attempt to create something new publicly every week in 2020.
+
 ## Why
 
 It's easy to call [ShellExecuteEx](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecuteexa) with the `properties` verb to show the properties dialog. [What's hard](https://devblogs.microsoft.com/oldnewthing/?p=22163) is keeping the dialog open without blocking or using hacks like `Sleep()`. This module solves that problem using a custom executable and a wrapping Node module.
